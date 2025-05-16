@@ -8,6 +8,11 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-university-navy/90 backdrop-blur-md px-4 md:px-6 py-3 shadow-lg">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
+          <img 
+            src="/lovable-uploads/3e0d8602-5863-415b-b013-2dd033dc3f53.png" 
+            alt="Galgotias Logo" 
+            className="h-8 w-8 rounded-full border-2 border-university-gold"
+          />
           <span className="font-bold text-xl md:text-2xl text-university-gold">Galgotias</span>
           <span className="font-semibold text-lg md:text-xl text-white">University</span>
         </div>
