@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,28 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .feature-card {
+    @apply bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-university-gold;
+  }
+
+  .nav-link {
+    @apply text-white/90 hover:text-university-gold transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-university-navy hover:bg-university-navy/90 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-university-gold hover:bg-university-gold/90 text-university-navy font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .section-heading {
+    @apply text-3xl font-bold text-university-navy mb-6 border-b-2 border-university-gold pb-2 inline-block;
   }
 }
