@@ -104,11 +104,11 @@
 
 @layer components {
   .feature-card {
-    @apply bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-university-gold;
+    @apply bg-black/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-white;
   }
 
   .nav-link {
-    @apply text-white/90 hover:text-university-gold transition-colors duration-200;
+    @apply text-white/90 hover:text-university-gold transition-colors duration-200 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-university-gold hover:after:w-full hover:after:left-0 after:transition-all after:duration-300;
   }
   
   .btn-primary {
@@ -122,4 +122,35 @@
   .section-heading {
     @apply text-3xl font-bold text-university-navy mb-6 border-b-2 border-university-gold pb-2 inline-block;
   }
+  
+  .glow {
+    @apply relative;
+  }
+  
+  .glow::before {
+    @apply content-[''] absolute -inset-0.5 bg-gradient-to-r from-university-gold via-university-navy to-university-gold rounded-lg blur opacity-50 transition duration-1000 animate-pulse;
+  }
+  
+  .glow:hover::before {
+    @apply opacity-100;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
 }
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
