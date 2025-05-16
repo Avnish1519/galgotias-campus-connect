@@ -4,7 +4,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { MapPin } from 'lucide-react';
+import { MapPin, Navigation, Compass } from 'lucide-react';
+import GoogleMap from '@/components/GoogleMap';
 
 const Campus: React.FC = () => {
   return (
@@ -24,14 +25,10 @@ const Campus: React.FC = () => {
         <div className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <div className="bg-gray-300 h-96 rounded-xl flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 mx-auto text-university-navy mb-2" />
-                  <p className="text-xl font-medium text-university-navy">Interactive Campus Map Coming Soon</p>
-                </div>
-              </div>
+              {/* Google Maps Component */}
+              <GoogleMap />
               
-              <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+              <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200 mt-6">
                 <h2 className="text-2xl font-bold text-university-navy mb-4">Explore Our Campus</h2>
                 <p className="text-gray-700 mb-6">
                   Our sprawling campus features state-of-the-art facilities, beautiful green spaces, and everything you need for a comprehensive 
@@ -43,7 +40,7 @@ const Campus: React.FC = () => {
                     <MapPin className="h-4 w-4" /> View Building Directory
                   </Button>
                   <Button variant="outline" className="border-university-navy text-university-navy hover:bg-university-navy/10">
-                    Download Campus Map
+                    <Navigation className="h-4 w-4 mr-2" /> Download Campus Map
                   </Button>
                 </div>
               </div>
@@ -109,6 +106,35 @@ const Campus: React.FC = () => {
                   <li className="flex items-start gap-3">
                     <div className="bg-university-gold/20 rounded-full h-6 w-6 flex items-center justify-center text-university-navy font-bold flex-shrink-0">4</div>
                     <p>Download the campus app for real-time navigation assistance</p>
+                  </li>
+                </ul>
+              </Card>
+              
+              <Card className="p-6 bg-university-gold/10">
+                <h3 className="text-xl font-bold text-university-navy mb-3 flex items-center gap-2">
+                  <Compass className="h-5 w-5" />
+                  Map Legend
+                </h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <div className="h-4 w-4 rounded-full bg-university-gold"></div>
+                    <span className="text-sm">Main Campus</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="h-4 w-4 rounded-full bg-[#0EA5E9]"></div>
+                    <span className="text-sm">Academic Buildings</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="h-4 w-4 rounded-full bg-[#F97316]"></div>
+                    <span className="text-sm">Facilities & Services</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="h-4 w-4 rounded-full bg-[#8B5CF6]"></div>
+                    <span className="text-sm">Recreation Areas</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="h-4 w-4 rounded-full bg-[#D946EF]"></div>
+                    <span className="text-sm">Administrative Buildings</span>
                   </li>
                 </ul>
               </Card>
