@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-hero-pattern bg-cover bg-center">
+    <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/lovable-uploads/3e0d8602-5863-415b-b013-2dd033dc3f53.png')" }}>
       <div className="absolute inset-0 bg-university-navy/60 backdrop-blur-sm"></div>
       <div className="container mx-auto px-6 text-center relative z-10 animate-fade-in">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Welcome to Galgotias University</h1>
