@@ -12,6 +12,7 @@ import Updates from "./pages/Updates";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import GalgotiasOne from "./pages/GalgotiasOne";
+import Explore from "./pages/Explore";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/updates" element={<Updates />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/galgotiasone" element={<GalgotiasOne />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
