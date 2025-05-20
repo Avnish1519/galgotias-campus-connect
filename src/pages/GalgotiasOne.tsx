@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AICoachChat from '@/components/AICoachChat';
+import AICoachSection from '@/components/AICoachSection';
 import ExploreSection from '@/components/ExploreSection';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import NewsletterSection from '@/components/NewsletterSection';
@@ -31,8 +32,11 @@ const GalgotiasOne: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
+      {/* Add AI Coach Section at the top */}
+      <AICoachSection />
+      
       {/* Hero Section with enhanced animations */}
-      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background with more particles */}
         <div className="absolute inset-0 bg-gradient-to-br from-university-navy via-university-navy/80 to-university-navy/70 z-0">
           <div className="absolute inset-0">
@@ -105,7 +109,7 @@ const GalgotiasOne: React.FC = () => {
               
               <Button
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 text-lg font-medium px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
+                className="border-white text-white hover:bg-white/10 text-lg font-medium px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
               >
                 Learn More
               </Button>
