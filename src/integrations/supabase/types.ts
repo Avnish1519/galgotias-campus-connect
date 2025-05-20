@@ -9,7 +9,207 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      announcements: {
+        Row: {
+          category: string
+          content: string
+          created_at: string
+          created_by: string | null
+          id: string
+          is_important: boolean | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          content: string
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          is_important?: boolean | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          content?: string
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          is_important?: boolean | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      clubs: {
+        Row: {
+          category: string
+          contact_email: string | null
+          created_at: string
+          description: string | null
+          id: string
+          instagram_handle: string | null
+          logo_url: string | null
+          name: string
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          contact_email?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          instagram_handle?: string | null
+          logo_url?: string | null
+          name: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          contact_email?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          instagram_handle?: string | null
+          logo_url?: string | null
+          name?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      events: {
+        Row: {
+          category: string
+          created_at: string
+          created_by: string | null
+          description: string | null
+          event_date: string
+          id: string
+          image_url: string | null
+          is_featured: boolean | null
+          location: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          event_date: string
+          id?: string
+          image_url?: string | null
+          is_featured?: boolean | null
+          location?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          event_date?: string
+          id?: string
+          image_url?: string | null
+          is_featured?: boolean | null
+          location?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      newsletter_subscriptions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          batch: string | null
+          bio: string | null
+          course: string | null
+          created_at: string
+          first_name: string | null
+          id: string
+          last_name: string | null
+          profile_image_url: string | null
+          student_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          batch?: string | null
+          bio?: string | null
+          course?: string | null
+          created_at?: string
+          first_name?: string | null
+          id: string
+          last_name?: string | null
+          profile_image_url?: string | null
+          student_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          batch?: string | null
+          bio?: string | null
+          course?: string | null
+          created_at?: string
+          first_name?: string | null
+          id?: string
+          last_name?: string | null
+          profile_image_url?: string | null
+          student_id?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      testimonials: {
+        Row: {
+          created_at: string
+          id: string
+          image_url: string | null
+          is_featured: boolean | null
+          name: string
+          position: string
+          quote: string
+          rating: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          is_featured?: boolean | null
+          name: string
+          position: string
+          quote: string
+          rating: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          is_featured?: boolean | null
+          name?: string
+          position?: string
+          quote?: string
+          rating?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
